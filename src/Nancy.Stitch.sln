@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Stitch", "Nancy.Stitch\Nancy.Stitch.csproj", "{5396FBA5-AD23-4FF9-A909-3B5E6686D71D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Stitch.Demo", "Nancy.Stitch.Demo\Nancy.Stitch.Demo.csproj", "{D210B570-E450-4F31-9AF4-F39E976FE2B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Stitch.DemoCoffeeScript", "Nancy.Stitch.DemoCoffeeScript\Nancy.Stitch.DemoCoffeeScript.csproj", "{47E30514-C9D1-4CB9-B05E-B503121957B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5396FBA5-AD23-4FF9-A909-3B5E6686D71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5396FBA5-AD23-4FF9-A909-3B5E6686D71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5396FBA5-AD23-4FF9-A909-3B5E6686D71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5396FBA5-AD23-4FF9-A909-3B5E6686D71D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D210B570-E450-4F31-9AF4-F39E976FE2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D210B570-E450-4F31-9AF4-F39E976FE2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D210B570-E450-4F31-9AF4-F39E976FE2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D210B570-E450-4F31-9AF4-F39E976FE2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E30514-C9D1-4CB9-B05E-B503121957B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E30514-C9D1-4CB9-B05E-B503121957B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E30514-C9D1-4CB9-B05E-B503121957B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E30514-C9D1-4CB9-B05E-B503121957B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
