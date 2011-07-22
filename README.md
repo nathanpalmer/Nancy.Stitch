@@ -5,7 +5,7 @@ To use Stitch in a Nancy project you simply need to add the Stitch package to yo
 
 > Install-Package Stitch.Compilers.CoffeeScript
 
-Then add the StitchConfiguration to your Bootstrapper, Register and Enable.
+Then create the StitchConfiguration and Enable.
 
 ```csharp
 var configuration = new StitchConfiguration()
@@ -27,8 +27,6 @@ var configuration = new StitchConfiguration()
                                         }
                         };
 
-container.Register<IStitchConfiguration>(configuration);
-
-Stitch.Enable(this, container.Resolve<IRootPathProvider>(), container.Resolve<IStitchConfiguration>());
+Stitch.Enable(this, container.Resolve<IRootPathProvider>(), configuration);
 ```
 
