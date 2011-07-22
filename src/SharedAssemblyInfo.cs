@@ -5,5 +5,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("Nancy")]
 [assembly: AssemblyProduct("Nancy")]
 [assembly: AssemblyCopyright("Copyright (C) Nathan Palmer")]
-[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyVersion("0.0.1")]
 

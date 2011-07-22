@@ -10,12 +10,6 @@ namespace Stitch.Tests.Nancy
 
             var configuration = new StitchConfiguration()
                                     {
-                                        /*Compilers = new[]
-                                                        {
-                                                            new StitchConfigurationCompiler {Type = typeof (JavaScriptCompiler).AssemblyQualifiedName, Extension = ".js"},
-                                                            new StitchConfigurationCompiler {Type = typeof (CoffeeScriptCompiler).AssemblyQualifiedName, Extension = ".coffee"},
-                                                            new StitchConfigurationCompiler {Type = typeof (jQueryTemplateCompiler).AssemblyQualifiedName, Extension = ".tmpl"}
-                                                        },*/
                                         Files = new[]
                                                     {
                                                         new StitchConfiguration()

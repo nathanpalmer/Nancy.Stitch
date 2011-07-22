@@ -2,7 +2,7 @@ require 'rubygems'
 require 'albacore'
 require 'rake/clean'
 
-NANCY_STITCH_VERSION = "0.1.0"
+NANCY_STITCH_VERSION = "0.0.1"
 OUTPUT = "build"
 CONFIGURATION = 'Release'
 SHARED_ASSEMBLY_INFO = 'src/SharedAssemblyInfo.cs'
@@ -14,7 +14,7 @@ Albacore.configure do |config|
 end
 
 desc "Compiles solution and runs unit tests"
-task :default => [:clean, :version, :compile, :publish, :package]
+task :default => [:clean, :version, :compile, :publish, :package, :nuget]
 
 #Add the folders that should be cleaned as part of the clean task
 CLEAN.include(OUTPUT)
@@ -53,4 +53,27 @@ zip :package => [:publish] do |zip|
 	zip.directories_to_zip "#{OUTPUT}/binaries"
 	zip.output_file = "Nancy.Stitch-Latest.zip"
 	zip.output_path = "#{OUTPUT}/packages"
+end
+
+task :nuget => [:compile,:publish] do
+	File.open("Nancy.Stitch.nuspec", 'w') { |f| f.write(%{<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Stitch</id>
+        <version>#{NANCY_STITCH_VERSION}</version>
+        <authors>Nathan Palmer</authors>
+        <description>Stitch pipeline extension for Nancy (A Sinatra inspired web framework for the .NET platform)</description>
+        <language>en-GB</language>
+        <projectUrl>https://github.com/nathanpalmer/Nancy.Stitch</projectUrl>
+        <licenseUrl>https://github.com/nathanpalmer/Nancy.Stitch/blob/master/LICENSE.txt</licenseUrl>
+    </metadata>
+    <files>
+        <file src="build\\binaries\\Nancy.Stitch.dll"
+              target="lib" />
+        <file src="LICENSE.txt"
+              target="" />
+    </files>
+</package>}) }
+	sh "tools/nuget/nuget.exe pack ./Nancy.Stitch.nuspec -OutputDirectory #{OUTPUT}"
+	rm "Nancy.Stitch.nuspec"
 end
