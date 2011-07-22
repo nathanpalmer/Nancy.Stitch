@@ -59,11 +59,11 @@ task :nuget => [:compile,:publish] do
 	File.open("Nancy.Stitch.nuspec", 'w') { |f| f.write(%{<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>Stitch</id>
+        <id>Nancy.Stitch</id>
         <version>#{NANCY_STITCH_VERSION}</version>
         <authors>Nathan Palmer</authors>
         <description>Stitch pipeline extension for Nancy (A Sinatra inspired web framework for the .NET platform)</description>
-        <language>en-GB</language>
+        <language>en-US</language>
         <projectUrl>https://github.com/nathanpalmer/Nancy.Stitch</projectUrl>
         <licenseUrl>https://github.com/nathanpalmer/Nancy.Stitch/blob/master/LICENSE.txt</licenseUrl>
     </metadata>
